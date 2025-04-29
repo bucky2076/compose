@@ -1,7 +1,13 @@
 services:
   omni-tools:
+    networks:
+      - expander
     image: iib0011/omni-tools:latest
     container_name: omni-tools
     restart: unless-stopped
     ports:
       - "8300:80"
+
+  networks:
+    expander:
+      external: true
