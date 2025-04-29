@@ -1,7 +1,7 @@
 services:
   omni-tools:
     networks:
-      - expander
+      - expander-net
     image: iib0011/omni-tools:latest
     container_name: omni-tools
     restart: unless-stopped
@@ -9,5 +9,6 @@ services:
       - "8300:80"
 
 networks:
-  expander:
+  expander-net:
     external: true
+    name: expander-net
