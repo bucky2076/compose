@@ -8,6 +8,6 @@ services:
     ports:
       - "8300:80"
 
-  networks:
-    expander:
-      external: true
+networks:
+  expander:
+    external: true
